@@ -1,6 +1,6 @@
-﻿ namespace StaffSaitOrhan
+﻿namespace StaffSaitOrhan
 {
-    partial class Departments
+    partial class FormStuffs
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,12 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dep_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthDate_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tcno_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dep_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +52,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(422, 46);
+            this.panel1.Size = new System.Drawing.Size(861, 46);
             this.panel1.TabIndex = 0;
             // 
             // btnDelete
@@ -88,14 +93,19 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_c,
-            this.Dep_c});
+            this.Name_c,
+            this.Surname_c,
+            this.BirthDate_c,
+            this.Gender_c,
+            this.Tcno_c,
+            this.dep_c});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 46);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(422, 404);
+            this.dataGridView1.Size = new System.Drawing.Size(861, 404);
             this.dataGridView1.TabIndex = 1;
             // 
             // Id_c
@@ -106,23 +116,58 @@
             this.Id_c.ReadOnly = true;
             this.Id_c.Visible = false;
             // 
-            // Dep_c
+            // Name_c
             // 
-            this.Dep_c.HeaderText = "Department";
-            this.Dep_c.MinimumWidth = 6;
-            this.Dep_c.Name = "Dep_c";
-            this.Dep_c.ReadOnly = true;
+            this.Name_c.HeaderText = "Name";
+            this.Name_c.MinimumWidth = 6;
+            this.Name_c.Name = "Name_c";
+            this.Name_c.ReadOnly = true;
             // 
-            // Departments
+            // Surname_c
+            // 
+            this.Surname_c.HeaderText = "Surname";
+            this.Surname_c.MinimumWidth = 6;
+            this.Surname_c.Name = "Surname_c";
+            this.Surname_c.ReadOnly = true;
+            // 
+            // BirthDate_c
+            // 
+            this.BirthDate_c.HeaderText = "Birth Date";
+            this.BirthDate_c.MinimumWidth = 6;
+            this.BirthDate_c.Name = "BirthDate_c";
+            this.BirthDate_c.ReadOnly = true;
+            // 
+            // Gender_c
+            // 
+            this.Gender_c.HeaderText = "Gender";
+            this.Gender_c.MinimumWidth = 6;
+            this.Gender_c.Name = "Gender_c";
+            this.Gender_c.ReadOnly = true;
+            // 
+            // Tcno_c
+            // 
+            this.Tcno_c.HeaderText = "TC No";
+            this.Tcno_c.MinimumWidth = 6;
+            this.Tcno_c.Name = "Tcno_c";
+            this.Tcno_c.ReadOnly = true;
+            // 
+            // dep_c
+            // 
+            this.dep_c.HeaderText = "Department";
+            this.dep_c.MinimumWidth = 6;
+            this.dep_c.Name = "dep_c";
+            this.dep_c.ReadOnly = true;
+            // 
+            // FormStuffs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 450);
+            this.ClientSize = new System.Drawing.Size(861, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Name = "Departments";
+            this.Name = "FormStuffs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Departments";
+            this.Text = "Stuffs";
             this.Load += new System.EventHandler(this.Departments_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -138,6 +183,11 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_c;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dep_c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name_c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Surname_c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BirthDate_c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender_c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tcno_c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dep_c;
     }
 }

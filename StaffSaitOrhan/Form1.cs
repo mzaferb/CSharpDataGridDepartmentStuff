@@ -23,5 +23,12 @@ namespace StaffSaitOrhan
             departments.MdiParent = this;
             departments.Show();
         }
+
+        private void stuffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormStuffs formStuffs = new FormStuffs();
+            formStuffs.MdiParent = this;
+            formStuffs.Show();
+        }
     }
 }

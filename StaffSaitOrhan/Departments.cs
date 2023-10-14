@@ -21,8 +21,8 @@ namespace StaffSaitOrhan
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FormDepartment formDeoartment = new FormDepartment();
-            formDeoartment.ShowDialog();
+            FormDepartment formDepartment = new FormDepartment();
+            formDepartment.ShowDialog();
             renewData();
         }
 
