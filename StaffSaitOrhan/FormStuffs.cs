@@ -20,7 +20,9 @@ namespace StaffSaitOrhan
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            Stuff stuff = new Stuff();
+            stuff.ShowDialog();
+            renewData();
         }
 
         void renewData()
@@ -55,12 +57,59 @@ namespace StaffSaitOrhan
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            int id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+
+            Stuff stuff = new Stuff(id);
+            stuff.ShowDialog();
+            renewData();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            int id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+
+            if (MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            {
+                return;
+            }
+            SqlConnection sqlConn = Definitions.sqlConn;
+            SqlCommand cmd = new SqlCommand("Delete Workers where Id = @id", sqlConn);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            try
+            {
+                sqlConn.Open();
+                int result = cmd.ExecuteNonQuery();
+
+                if (result > 0)
+                {
+                    MessageBox.Show("Deleted", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    renewData();
+                }
+                else
+                {
+                    MessageBox.Show("Not Deleted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Connection Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+
         }
     }
 }
